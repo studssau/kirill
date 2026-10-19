@@ -2,5 +2,5 @@
 #define COMPASS_H
 #include <Arduino.h>
 void initCompass(); //
-void readCompass(int x, int y); //
+void readCompass(int x, int z, int y); //
 #endif
