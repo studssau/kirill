@@ -18,11 +18,25 @@ void loop() {
   readCompass(x,y,z);
   readGps(lat,lon);
   
-  Serial.print(x + "," + y + "," + z);
+  Serial.print(x);
+  Serial.print(",");
+  Serial.print(y);
+  Serial.print(",");
+  Serial.print(z);
+  Serial.print(",");
+  Serial.print(lat);
+  Serial.print(",");
+  Serial.print(lon)
   Serial.println();
-  Serial.print(lat + "," + lan);
-  Serial.println();
-  e220ttl.sendMessage(x + "," + y + "," + z + "," + lat + "," + lan);
+  e220ltt.sendMessage(x);
+  e220ltt.sendMessage(",");
+  e220ltt.sendMessage(y);
+  e220ltt.sendMessage(",");
+  e220ltt.sendMessage(z);
+  e220ltt.sendMessage(",");
+  e220ltt.sendMessage(lat);
+  e220ltt.sendMessage(",");
+  e220ltt.sendMessage(lon);
   
   delay(1000);
 }
