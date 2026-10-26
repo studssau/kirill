@@ -15,6 +15,14 @@ void loop() {
   int x, y, z; 
   float lat, lon; 
 
+  if (e220ttl.available() > 1) {
+    
+    ResponseContainer response = e220ttl.receiveMessage();
+    
+    String Message = response.data;
+
+  }
+
   readCompass(x,y,z);
   readGps(lat,lon);
   
@@ -28,6 +36,8 @@ void loop() {
   Serial.print(",");
   Serial.print(lon)
   Serial.println();
+  
+  /*
   e220ltt.sendMessage(x);
   e220ltt.sendMessage(",");
   e220ltt.sendMessage(y);
@@ -37,6 +47,6 @@ void loop() {
   e220ltt.sendMessage(lat);
   e220ltt.sendMessage(",");
   e220ltt.sendMessage(lon);
-  
+  */
   delay(1000);
 }
