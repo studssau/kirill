@@ -8,6 +8,6 @@ void initCompass() {
 }
 void ReadCompass() {
 compass.read();
-varX = compass.getX();
-varY = compass.getY();
-varZ = compass.getZ();
+X = compass.getX();
+Y = compass.getY();
+Z = compass.getZ();
