@@ -14,7 +14,7 @@ void setup() {
 void loop() {
   int x, y, z; 
   float lat, lon; 
-
+  /*
   if (e220ttl.available() > 1) {
     
     ResponseContainer response = e220ttl.receiveMessage();
@@ -22,7 +22,7 @@ void loop() {
     String Message = response.data;
 
   }
-
+  */
   readCompass(x,y,z);
   readGps(lat,lon);
   
@@ -34,11 +34,11 @@ void loop() {
   Serial.print(",");
   Serial.print(lat);
   Serial.print(",");
-  Serial.print(lon)
+  Serial.print(lon);
   Serial.println();
   
   
-  //e220ttl.sendMessage("Название команды," + String(x) + "," + String(y) + "," + String(z) + "," + String(lat) + "," + String(lng) + "," + String(alt) + "," + String(sat) + "\n\r");
+  e220ttl.sendMessage("Название команды," + String(x) + "," + String(y) + "," + String(z) + "," + String(lat) + "," + String(lng) + "," + String(alt) + "," + String(sat) + "\n\r");
   
   delay(1000);
 }
