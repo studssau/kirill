@@ -37,16 +37,8 @@ void loop() {
   Serial.print(lon)
   Serial.println();
   
-  /*
-  e220ltt.sendMessage(x);
-  e220ltt.sendMessage(",");
-  e220ltt.sendMessage(y);
-  e220ltt.sendMessage(",");
-  e220ltt.sendMessage(z);
-  e220ltt.sendMessage(",");
-  e220ltt.sendMessage(lat);
-  e220ltt.sendMessage(",");
-  e220ltt.sendMessage(lon);
-  */
+  
+  //e220ttl.sendMessage("Название команды," + String(x) + "," + String(y) + "," + String(z) + "," + String(lat) + "," + String(lng) + "," + String(alt) + "," + String(sat) + "\n\r");
+  
   delay(1000);
 }
